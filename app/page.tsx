@@ -2,13 +2,21 @@ import React from 'react'
 
 const Home = async () => {
 
-const testResponse = await fetch('https://blog-a2-server.up.railway.app/api')
+const postResponse = await fetch('https://blog-a2.vercel.app/api', {
+  cache: 'no-store'
+})
 
-const data = await testResponse.json()
+const post = await postResponse.json()
+
+console.log(post)
 
   return (
-    <div>
-      <h1>{data}</h1>
+    <div className='py-6'>
+      <h1 className='text-3xl font-bold tracking-tight mb-8'>Latest posts</h1>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+
+      </div>
     </div>
   )
 }
