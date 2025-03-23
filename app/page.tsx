@@ -7,6 +7,8 @@ const Home = async () => {
 
   const post = await postResponse.json()
 
+  console.log(post[0])
+
   return (
     <div className="py-6">
       <h1 className="text-3xl font-bold tracking-tight mb-8">Latest posts</h1>
