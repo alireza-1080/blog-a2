@@ -2,6 +2,7 @@ import React from 'react'
 
 const Home = async () => {
   const postResponse = await fetch('https://blog-a2.vercel.app/api', {
+    credentials: 'include',
     cache: 'no-store',
   })
 
