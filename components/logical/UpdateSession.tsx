@@ -4,7 +4,7 @@ import React from 'react'
 const UpdateSession = () => {
   const updateSession = async () => {
     try {
-      await fetch('https://blog-a2.vercel.app/api', {
+      await fetch('https://blog-a2.vercel.app/api/test', {
         cache: 'no-store',
         credentials: 'include',
       })
