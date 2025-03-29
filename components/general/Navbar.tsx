@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '../ui/button'
+import SignSection from './NavBar/SignSection'
 
 const Navbar = () => {
+
+
   return (
     <nav className="py-5 flex items-center justify-between">
       <div className="flex items-center gap-6">
@@ -18,7 +20,6 @@ const Navbar = () => {
 
         {/* Navbar */}
         <div className="hidden sm:flex items-center gap-6">
-
           {/* Home button */}
           <Link href={'/'} className="text-sm font-medium hover:text-blue-500 transition-colors">
             Home
@@ -31,10 +32,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className='flex items-center gap-4'>
-        <Button>Login</Button>
-        <Button variant={'secondary'}>Sign Up</Button>
-      </div>
+      <SignSection />
     </nav>
   )
 }
