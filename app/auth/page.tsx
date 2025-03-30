@@ -20,8 +20,8 @@ const Auth = async ({ searchParams }: { searchParams: Promise<SearchParams> }) =
   const formType = mode ? "signup" : "signin"
 
   return (
-    <div className="w-full mt-10">
-      <Tabs defaultValue={formType} className="w-full">
+    <div className="w-full mt-10 flex justify-center">
+      <Tabs defaultValue={formType} className="max-w-[600px] w-full gap-5">
         <TabsList className="w-full">
           <TabsTrigger value="signin">Sign in</TabsTrigger>
           <TabsTrigger value="signup">Sign up</TabsTrigger>
