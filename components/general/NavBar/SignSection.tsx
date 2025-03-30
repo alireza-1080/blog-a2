@@ -11,11 +11,13 @@ const SignSection = () => {
     <>
       {!isItAuthPage ? (
         <div className="flex items-center gap-2 sm:gap-4">
-          <Link href={'/auth'}>
-            <Button className='scale-90 sm:scale-100'>Sign in</Button>
+          <Link href={'/auth'} className="cursor-pointer">
+            <Button className="scale-90 sm:scale-100 cursor-pointer">Sign in</Button>
           </Link>
-          <Link href={'/auth?mode=signup'}>
-            <Button variant={'secondary'} className='scale-90 sm:scale-100'>Sign up</Button>
+          <Link href={'/auth?mode=signup'} className="cursor-pointer">
+            <Button variant={'secondary'} className="scale-90 sm:scale-100 cursor-pointer">
+              Sign up
+            </Button>
           </Link>
         </div>
       ) : (

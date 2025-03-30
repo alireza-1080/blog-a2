@@ -23,8 +23,8 @@ const Auth = async ({ searchParams }: { searchParams: Promise<SearchParams> }) =
     <div className="w-full mt-10 flex justify-center">
       <Tabs defaultValue={formType} className="max-w-[600px] w-full gap-5">
         <TabsList className="w-full">
-          <TabsTrigger value="signin">Sign in</TabsTrigger>
-          <TabsTrigger value="signup">Sign up</TabsTrigger>
+          <TabsTrigger value="signin" className='cursor-pointer'>Sign in</TabsTrigger>
+          <TabsTrigger value="signup" className='cursor-pointer'>Sign up</TabsTrigger>
         </TabsList>
         <TabsContent value="signin">
           <LoginForm />

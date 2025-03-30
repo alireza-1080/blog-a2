@@ -68,7 +68,6 @@ const SignupForm = () => {
       }
 
       toast.success(data.message)
-      console.log(data.user)
       router.replace('/dashboard')
     } catch (error) {
       if (error instanceof Error) {
@@ -121,7 +120,7 @@ const SignupForm = () => {
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
       </div>
-      <Button type="submit">Sign up</Button>
+      <Button type="submit" className='cursor-pointer'>Sign up</Button>
     </form>
   )
 }
