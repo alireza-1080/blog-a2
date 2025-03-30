@@ -6,9 +6,12 @@ import { Button } from '../ui/button'
 import toast from 'react-hot-toast'
 import signupSchema from '@/schemas/signupSchema'
 import z from 'zod'
-import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 const SignupForm = () => {
+
+  const router = useRouter()
+
   const [username, setUsername] = React.useState<string>('')
   const [email, setEmail] = React.useState<string>('')
   const [avatar, setAvatar] = React.useState<File | null>(null)
@@ -50,13 +53,29 @@ const SignupForm = () => {
       formData.append('avatar', avatar)
     }
 
-    const signupResponse = await axios.post('/api/user/create', {
-      Credential: true,
-    })
+    try {
+      const signupResponse = await fetch('/api/user/create', {
+        method: 'POST',
+        credentials: 'include',
+        body: formData,
+      })
 
-    const signupData = signupResponse.data
+      const data = await signupResponse.json()
 
-    console.log(signupData)
+      if (signupResponse.status >= 400) {
+        toast.error(data.error)
+        return
+      }
+
+      toast.success(data.message)
+      console.log(data.user)
+      router.replace('/dashboard')
+    } catch (error) {
+      if (error instanceof Error) {
+        toast(`❌ ${error.message}`)
+        console.log(error)
+      }
+    }
   }
 
   React.useEffect(() => {
