@@ -4,7 +4,7 @@ import { Button } from './ui/button'
 
 const Test = () => {
   const sendCookie = async () => {
-    const response = await fetch('/api/user/test', {
+    const response = await fetch('/api/user/is-logged-in', {
       method: 'POST',
       credentials: 'include',
     })

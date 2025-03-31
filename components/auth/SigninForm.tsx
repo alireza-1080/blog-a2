@@ -5,6 +5,7 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
+import { mutate } from 'swr'
 
 const SigninForm = () => {
   const router = useRouter()
@@ -26,6 +27,8 @@ const SigninForm = () => {
       })
 
       const data = await loginResponse.json()
+
+      mutate('/api/user/is-logged-in')
 
       if (loginResponse.status >= 400) {
         toast.error(data.error)

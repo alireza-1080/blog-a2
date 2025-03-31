@@ -1,9 +1,29 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import SignSection from './NavBar/SignSection'
+import NavProfile from './NavBar/NavProfile'
+import useSWR from 'swr'
 
 const Navbar = () => {
+  const isLoggedInFetcher = async (url: string) => {
+    const isLoggedInResponse = await fetch(url, {
+      method: 'POST',
+      credentials: 'include',
+    })
 
+    const isUserLoggedInData = await isLoggedInResponse.json()
+
+    const isUserLoggedIn = isUserLoggedInData.isUserLoggedIn
+
+    return isUserLoggedIn
+  }
+
+  const {data: isUserLoggedIn} = useSWR('/api/user/is-logged-in', isLoggedInFetcher, {
+    revalidateOnFocus: true,
+    revalidateOnReconnect: true,
+    refreshInterval: 0
+  })
 
   return (
     <nav className="py-5 flex items-center justify-between">
@@ -32,7 +52,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <SignSection />
+      {isUserLoggedIn ? <NavProfile /> : <SignSection />}
     </nav>
   )
 }

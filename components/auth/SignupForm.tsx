@@ -7,6 +7,7 @@ import toast from 'react-hot-toast'
 import signupSchema from '@/schemas/signupSchema'
 import z from 'zod'
 import { useRouter } from 'next/navigation'
+import { mutate } from 'swr'
 
 const SignupForm = () => {
 
@@ -62,6 +63,8 @@ const SignupForm = () => {
 
       const data = await signupResponse.json()
 
+      mutate('/api/user/is-logged-in')
+      
       if (signupResponse.status >= 400) {
         toast.error(data.error)
         return
