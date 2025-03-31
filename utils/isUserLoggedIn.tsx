@@ -27,7 +27,7 @@ const isUserLoggedIn = async (): Promise<boolean> => {
     const data = await response.json()
 
     const isUserLoggedIn = data.isUserLoggedIn
-    console.log(isUserLoggedIn)
+    
     return isUserLoggedIn
   } catch (error) {
     console.log(error)
