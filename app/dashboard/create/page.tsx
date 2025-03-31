@@ -53,6 +53,7 @@ const CreateBlog = () => {
     }
     
     toast.success("PASSED")
+    console.log(data)
   }
 
   React.useEffect(() => {
