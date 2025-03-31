@@ -2,8 +2,11 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import toast from 'react-hot-toast'
 import { mutate } from 'swr'
+import { useRouter } from 'next/navigation'
 
 const NavProfile = () => {
+
+  const router = useRouter()
 
   const handleLogOut = async () => {
 
@@ -12,8 +15,11 @@ const NavProfile = () => {
       credentials: 'include'
     })
 
-    mutate('/api/user/is-logged-in')
     toast.success('User logged out successfully')
+
+    mutate('/api/user/is-logged-in')
+
+    router.refresh()
   }
 
   return (

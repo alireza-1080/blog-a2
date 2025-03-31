@@ -17,7 +17,7 @@ const isUserLoggedIn = async (): Promise<boolean> => {
   }
 
   try {
-    const response = await fetch('/api/user/is-logged-in', {
+    const response = await fetch('https://blog-a2.vercel.app/api/user/is-logged-in', {
       method: 'POST',
       credentials: 'include',
       headers,
@@ -27,7 +27,7 @@ const isUserLoggedIn = async (): Promise<boolean> => {
     const data = await response.json()
 
     const isUserLoggedIn = data.isUserLoggedIn
-
+    console.log(isUserLoggedIn)
     return isUserLoggedIn
   } catch (error) {
     console.log(error)
