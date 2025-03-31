@@ -24,7 +24,9 @@ const NavProfile = () => {
 
   return (
     <div>
-      <Button onClick={handleLogOut} variant={'destructive'} className='cursor-pointer'>Logout</Button>
+      <Button onClick={handleLogOut} variant={'outline'} className='cursor-pointer'>
+        <h3 className='text-red-500'>Logout</h3>
+      </Button>
     </div>
   )
 }

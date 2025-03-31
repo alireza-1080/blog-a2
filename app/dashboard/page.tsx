@@ -1,17 +1,17 @@
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import React from 'react'
-import isUserLoggedInFunc from '@/utils/isUserLoggedIn'
-import { redirect } from 'next/navigation'
 
 const Dashboard = async () => {
-
-  const isUserLoggedIn = await isUserLoggedInFunc()
-
-  if (!isUserLoggedIn) {
-   return redirect('/auth')
-  }
-
   return (
-    <div>Dashboard</div>
+    <div>
+        <div className='flex items-center justify-between mb-4'>
+            <h2 className='text-xl font-medium'>Your Blog Articles</h2>
+            <Link href={'/dashboard/create'}>
+              <Button className='cursor-pointer'>Create Post</Button>
+            </Link>
+        </div>
+    </div>
   )
 }
 
