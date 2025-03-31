@@ -1,7 +1,7 @@
 import React from 'react'
 import { redirect } from 'next/navigation'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import LoginForm from '@/components/auth/SigninForm'
+import SigninForm from '@/components/auth/SigninForm'
 import SignupForm from '@/components/auth/SignupForm'
 
 type SearchParams = {
@@ -21,13 +21,13 @@ const Auth = async ({ searchParams }: { searchParams: Promise<SearchParams> }) =
 
   return (
     <div className="w-full mt-10 flex justify-center">
-      <Tabs defaultValue={formType} className="max-w-[600px] w-full gap-5">
+      <Tabs defaultValue={formType} className="max-w-96 w-full gap-5">
         <TabsList className="w-full">
           <TabsTrigger value="signin" className='cursor-pointer'>Sign in</TabsTrigger>
           <TabsTrigger value="signup" className='cursor-pointer'>Sign up</TabsTrigger>
         </TabsList>
         <TabsContent value="signin">
-          <LoginForm />
+          <SigninForm />
         </TabsContent>
         <TabsContent value="signup">
           <SignupForm />
