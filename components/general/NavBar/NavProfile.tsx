@@ -51,10 +51,12 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
 
   return (
     <div className="flex items-center gap-2">
-      <h3 className="hidden sm:block">
-        <span className="text-blue-500 font-extrabold">@</span>
-        {user?.username}
-      </h3>
+      <Link href={'/dashboard'}>
+        <h3 className="hidden sm:block cursor-pointer">
+          <span className="text-blue-500 font-extrabold">@</span>
+          {user?.username}
+        </h3>
+      </Link>
       <Link href={'/dashboard'}>
         <Image
           src={imageUrl}

@@ -21,18 +21,9 @@ const Navbar = async () => {
             </span>
           </h1>
         </Link>
-
-        {/* Navbar */}
-        <div className="hidden sm:flex items-center gap-6">
-          
-          {/* Dashboard button */}
-          <Link href={'/dashboard'} className="text-sm font-medium hover:text-blue-500 transition-colors">
-            Dashboard
-          </Link>
-        </div>
       </div>
 
-      <UserSection isUserLoggedInProp={isUserLoggedIn} user={user}/>
+      <UserSection isUserLoggedInProp={isUserLoggedIn} user={user} />
     </nav>
   )
 }
