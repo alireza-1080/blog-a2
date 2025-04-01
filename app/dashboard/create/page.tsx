@@ -55,7 +55,7 @@ const CreateBlog = () => {
     formData.append('image', image)
     formData.append('title', data.title)
     formData.append('content', data.content)
-    console.log(image)
+
     try {
       const response = await fetch('/api/article/create', {
         method: 'POST',
@@ -64,8 +64,23 @@ const CreateBlog = () => {
       })
 
       const data = await response.json()
-      console.log(data)
+
+      if (!response.ok) {
+        throw new Error(data.error)
+      }
+
+      toast.success(data.message)
+      setTitle('')
+      setContent('')
+      setImage(null)
+      setPreviewUrl('/png/image.png')
+      if (fileInputElement.current) {
+        fileInputElement.current.value = ''
+      }
     } catch (error) {
+      if (error instanceof Error) {
+        toast.error(error.message)
+      }
       console.log(error)
     }
   }
