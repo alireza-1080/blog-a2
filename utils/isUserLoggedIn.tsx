@@ -21,16 +21,18 @@ const isUserLoggedIn = async (): Promise<boolean> => {
       method: 'POST',
       credentials: 'include',
       headers,
-      cache: 'no-cache'
+      cache: 'no-store',
     })
 
     const data = await response.json()
 
     const isUserLoggedIn = data.isUserLoggedIn
-    
+
     return isUserLoggedIn
   } catch (error) {
-    console.log(error)
+    if (error instanceof Error) {
+      console.log(error.message)
+    }
     return false
   }
 }

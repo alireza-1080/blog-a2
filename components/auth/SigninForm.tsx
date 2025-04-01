@@ -29,6 +29,7 @@ const SigninForm = () => {
       const data = await loginResponse.json()
 
       mutate('/api/user/is-logged-in')
+      mutate('/api/user/get-me')
 
       if (loginResponse.status >= 400) {
         toast.error(data.error)

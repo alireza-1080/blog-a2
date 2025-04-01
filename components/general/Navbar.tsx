@@ -2,12 +2,15 @@ import React from 'react'
 import Link from 'next/link'
 import UserSection from './NavBar/UserSection'
 import isUserLoggedInFunc from '@/utils/isUserLoggedIn'
+import getUser from '@/utils/getUser'
 
 const Navbar = async () => {
   const isUserLoggedIn = await isUserLoggedInFunc()
 
+  const user = await getUser()
+
   return (
-    <nav className="py-5 flex items-center justify-between">
+    <nav className="py-5 flex items-center justify-between mb-5">
       <div className="flex items-center gap-6">
         {/* Logo */}
         <Link href={'/'}>
@@ -21,11 +24,7 @@ const Navbar = async () => {
 
         {/* Navbar */}
         <div className="hidden sm:flex items-center gap-6">
-          {/* Home button */}
-          <Link href={'/'} className="text-sm font-medium hover:text-blue-500 transition-colors">
-            Home
-          </Link>
-
+          
           {/* Dashboard button */}
           <Link href={'/dashboard'} className="text-sm font-medium hover:text-blue-500 transition-colors">
             Dashboard
@@ -33,7 +32,7 @@ const Navbar = async () => {
         </div>
       </div>
 
-      <UserSection isUserLoggedInProp={isUserLoggedIn} />
+      <UserSection isUserLoggedInProp={isUserLoggedIn} user={user}/>
     </nav>
   )
 }
