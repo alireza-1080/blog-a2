@@ -11,7 +11,7 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
   const router = useRouter()
 
   const [user, setUser] = React.useState(userInit)
-  const [imageUrl, setImageUrl] = React.useState<string>(`/${userInit?.image}` || '/png/user.png')
+  const [imageUrl, setImageUrl] = React.useState<string>(userInit?.image ? `/${userInit?.image}` : '/png/user.png')
 
   const userFetcher = async (url: string) => {
     const response = await fetch(url, {
@@ -46,7 +46,7 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
   }
 
   React.useEffect(() => {
-    setImageUrl(`/${user?.image}` || '/png/user.png')
+    setImageUrl(user?.image ? `/${user?.image}` : '/png/user.png')
   }, [user])
 
   return (
@@ -62,9 +62,9 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
           src={imageUrl}
           width={100}
           height={100}
-          alt="test"
+          alt="user"
           priority
-          className="w-9 rounded-full cursor-pointer border-2 border-blue-500"
+          className="w-9 h-9 rounded-full cursor-pointer border-2 border-blue-500"
         ></Image>
       </Link>
       <Image
@@ -72,7 +72,7 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
         width={100}
         height={100}
         alt="logout"
-        className="w-9 rounded-full cursor-pointer"
+        className="w-9 h-9 rounded-full cursor-pointer"
         onClick={handleLogOut}
       ></Image>
     </div>
