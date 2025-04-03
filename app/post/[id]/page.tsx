@@ -24,7 +24,7 @@ type Data = {
       username: string
     }
   }
-  userRole: 'admin' | 'user',
+  userRole: 'admin' | 'user'
   userId: string
 }
 
@@ -49,17 +49,19 @@ const PostIdPage = async ({ params }: { params: Params }) => {
 
       <div className="mb-8 mt-6">
         <h1 className="text-3xl font-bold tracking-tight mb-4">{post.title}</h1>
-        <div className="flex items-center space-x-4">
+
+        <div className="w-full flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <AspectRatio ratio={1 / 1} className="size-10 overflow-hidden rounded-full">
+            <div className="relative size-10 overflow-hidden rounded-full">
               <Image
                 src={`/${post.author.image}`}
-                fill
+                width={100}
+                height={100}
                 alt={`@${post.author.username}`}
                 className="object-cover"
                 priority
               ></Image>
-            </AspectRatio>
+            </div>
             <p className="font-medium">{`@${post.author.username}`}</p>
           </div>
           <p className="text-sm text-gray-500">
@@ -82,9 +84,11 @@ const PostIdPage = async ({ params }: { params: Params }) => {
         </CardContent>
       </Card>
 
-      {userId === post.authorId || userRole === 'admin' && (
-        <div className='mx-auto w-1/2 mt-4'>
-          <Button variant={'destructive'} className='w-full '>Delete Post</Button>
+      {(userId === post.authorId || userRole === 'admin') && (
+        <div className="mx-auto w-1/2 mt-4">
+          <Button variant={'destructive'} className="w-full ">
+            Delete Post
+          </Button>
         </div>
       )}
     </div>
