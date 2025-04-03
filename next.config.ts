@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         source: '/usersAvatars/:path*',
         destination: 'https://blog-a2-server.up.railway.app/usersAvatars/:path*',
       },
+      {
+        source: '/articlesImages/:path*',
+        destination: 'https://blog-a2-server.up.railway.app/articlesImages/:path*',
+      },
     ]
   },
   images: {
@@ -20,6 +24,11 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'blog-a2-server.up.railway.app',
         pathname: '/usersAvatars/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'blog-a2-server.up.railway.app',
+        pathname: '/articlesImages/**',
       },
     ],
   },

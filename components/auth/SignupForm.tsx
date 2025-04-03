@@ -20,6 +20,7 @@ const SignupForm = () => {
   const [password, setPassword] = React.useState<string>('')
   const [confirmPassword, setConfirmPassword] = React.useState<string>('')
   const [previewUrl, setPreviewUrl] = React.useState<string>('/png/user.png')
+  const [isPending, setIsPending] = React.useState<boolean>(false)
 
   const fileInput = React.useRef<HTMLInputElement | null>(null)
 
@@ -44,6 +45,7 @@ const SignupForm = () => {
 
   const formSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsPending(true)
 
     const userDataObject: z.infer<typeof signupSchema> = {
       username,
@@ -56,6 +58,7 @@ const SignupForm = () => {
 
     if (!success) {
       toast(`❌ ${error.errors[0].message}`)
+      setIsPending(false)
       return
     }
 
@@ -83,6 +86,7 @@ const SignupForm = () => {
 
       if (signupResponse.status >= 400) {
         toast.error(data.error)
+        setIsPending(false)
         return
       }
 
@@ -92,6 +96,7 @@ const SignupForm = () => {
       if (error instanceof Error) {
         toast(`❌ ${error.message}`)
         console.log(error)
+        setIsPending(false)
       }
     }
   }
@@ -165,7 +170,7 @@ const SignupForm = () => {
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
       </div>
-      <Button type="submit" className="cursor-pointer">
+      <Button type="submit" className="cursor-pointer" disabled={isPending}>
         Sign up
       </Button>
     </form>

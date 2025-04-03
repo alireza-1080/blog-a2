@@ -3,6 +3,7 @@ import Link from 'next/link'
 import UserSection from './NavBar/UserSection'
 import isUserLoggedInFunc from '@/utils/isUserLoggedIn'
 import getUser from '@/utils/getUser'
+import ThemeChange from '../theme/themeChange'
 
 const Navbar = async () => {
   const isUserLoggedIn = await isUserLoggedInFunc()
@@ -22,6 +23,8 @@ const Navbar = async () => {
           </h1>
         </Link>
       </div>
+      
+    <ThemeChange />
 
       <UserSection isUserLoggedInProp={isUserLoggedIn} user={user} />
     </nav>

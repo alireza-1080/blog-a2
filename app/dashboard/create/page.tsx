@@ -17,6 +17,7 @@ const CreateBlog = () => {
   const [content, setContent] = React.useState<string>('')
   const [image, setImage] = React.useState<File | null>(null)
   const [previewUrl, setPreviewUrl] = React.useState<string>('/png/image.png')
+  const [isPending, setIsPending] = React.useState<boolean>(false)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -38,16 +39,19 @@ const CreateBlog = () => {
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsPending(true)
 
     const { success, data, error } = articleSchema.safeParse({ title, content })
 
     if (!success) {
       toast.error(error.errors[0].message)
+      setIsPending(false)
       return
     }
 
     if (!image) {
       toast.error('Post image is required')
+      setIsPending(false)
       return
     }
 
@@ -77,11 +81,13 @@ const CreateBlog = () => {
       if (fileInputElement.current) {
         fileInputElement.current.value = ''
       }
+      setIsPending(false)
     } catch (error) {
       if (error instanceof Error) {
         toast.error(error.message)
       }
       console.log(error)
+      setIsPending(false)
     }
   }
 
@@ -110,7 +116,7 @@ const CreateBlog = () => {
             </div>
             <div className="flex flex-col gap-2">
               <Label htmlFor="content">Content</Label>
-              <Textarea id="content" value={content} onChange={(e) => setContent(e.target.value)}></Textarea>
+              <Textarea id="content" value={content} onChange={(e) => setContent(e.target.value)} className='h-72'></Textarea>
             </div>
             <div className="flex flex-col justify-between items-center gap-4">
               <Label htmlFor="picture" className="self-start">
@@ -149,7 +155,9 @@ const CreateBlog = () => {
               </div>
             </div>
 
-            <Button type="submit">Create Post</Button>
+            <Button type="submit" disabled={isPending}>
+              Create Post
+            </Button>
           </form>
         </CardContent>
       </Card>

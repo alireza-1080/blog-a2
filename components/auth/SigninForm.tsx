@@ -12,9 +12,11 @@ const SigninForm = () => {
 
   const [identifier, setIdentifier] = React.useState<string>('')
   const [password, setPassword] = React.useState<string>('')
+  const [isPending, setIsPending] = React.useState<boolean>(false)
 
   const formSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsPending(true)
 
     try {
       const loginResponse = await fetch('/api/user/login', {
@@ -33,6 +35,7 @@ const SigninForm = () => {
 
       if (loginResponse.status >= 400) {
         toast.error(data.error)
+        setIsPending(false)
         return
       }
 
@@ -42,6 +45,7 @@ const SigninForm = () => {
       if (error instanceof Error) {
         toast(`❌ ${error.message}`)
         console.log(error)
+        setIsPending(false)
       }
     }
   }
@@ -58,7 +62,7 @@ const SigninForm = () => {
         <Input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
 
-      <Button type="submit" className="cursor-pointer">
+      <Button type="submit" className="cursor-pointer" disabled={isPending}>
         Sign in
       </Button>
     </form>

@@ -49,6 +49,8 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
     setImageUrl(user?.image ? `/${user?.image}` : '/png/user.png')
   }, [user])
 
+  React.useEffect(() => {}, [imageUrl])
+
   return (
     <div className="flex items-center gap-2">
       <Link href={'/dashboard'}>
@@ -62,7 +64,7 @@ const NavProfile = ({ user: userInit }: { user: UserType | null }) => {
           src={imageUrl}
           width={100}
           height={100}
-          alt="user"
+          alt={`${user?.username} ? ${user?.username} : 'user'`}
           priority
           className="w-9 h-9 rounded-full cursor-pointer border-2 border-blue-500"
         ></Image>
