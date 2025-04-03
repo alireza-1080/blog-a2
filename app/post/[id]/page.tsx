@@ -72,7 +72,7 @@ const PostIdPage = async ({ params }: { params: Params }) => {
         </div>
       </div>
 
-      <AspectRatio ratio={16 / 9} className="h-[400px] mb-8 rounded-lg overflow-hidden">
+      <AspectRatio ratio={16 / 9} className="w-full mb-8 rounded-lg overflow-hidden">
         <Image src={`/${post.image}`} fill alt={post.title} priority></Image>
       </AspectRatio>
 
