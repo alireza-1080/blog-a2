@@ -16,8 +16,11 @@ type Post = {
   title: string
   content: string
   image: string
+  imagePath: string
+  authorId: string
+  createdAt: string
+  updatedAt: string
   author: Author
-  createdAt: Date
 }
 
 const Dashboard = async () => {
