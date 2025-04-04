@@ -102,60 +102,95 @@ const CreateBlog = () => {
   }, [image])
 
   return (
-    <div>
-      <Card className="max-w-lg mx-auto">
-        <CardHeader>
-          <CardTitle>Create Post</CardTitle>
-          <CardDescription>Create a post to share it with the world 🌍</CardDescription>
+    <div className="py-8">
+      <Card className="max-w-lg mx-auto bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-700 rounded-xl shadow-md pt-0 overflow-hidden">
+        <CardHeader className="bg-gray-50 dark:bg-gray-800/50 border-b-2 border-gray-300 dark:border-gray-700 p-6">
+          <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">Create Post</CardTitle>
+          <CardDescription className="text-gray-600 dark:text-gray-400">
+            Create a post to share it with the world 🌍
+          </CardDescription>
         </CardHeader>
-        <CardContent>
-          <form className="flex flex-col gap-4" onSubmit={handleFormSubmit}>
+        <CardContent className="p-6">
+          <form className="flex flex-col gap-6" onSubmit={handleFormSubmit}>
             <div className="flex flex-col gap-2">
-              <Label htmlFor="title">Title</Label>
-              <Input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+              <Label htmlFor="title" className="text-gray-900 dark:text-gray-100 font-medium">
+                Title
+              </Label>
+              <Input
+                id="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
+
             <div className="flex flex-col gap-2">
-              <Label htmlFor="content">Content</Label>
-              <Textarea id="content" value={content} onChange={(e) => setContent(e.target.value)} className='h-72'></Textarea>
+              <Label htmlFor="content" className="text-gray-900 dark:text-gray-100 font-medium">
+                Content
+              </Label>
+              <Textarea
+                id="content"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                className="h-72 border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
-            <div className="flex flex-col justify-between items-center gap-4">
-              <Label htmlFor="picture" className="self-start">
+
+            <div className="flex flex-col gap-4">
+              <Label htmlFor="picture" className="text-gray-900 dark:text-gray-100 font-medium">
                 Image
               </Label>
-              <div className="flex gap-2 order-2">
-                <Button type="button" className="w-fit" onClick={handleButtonClick}>
-                  Select
-                </Button>
-                <Button type="button" className="w-fit" variant={'outline'} onClick={handleRemove}>
-                  <h3 className="text-red-500">Remove</h3>
-                </Button>
-                <Input
-                  ref={fileInputElement}
-                  id="picture"
-                  type="file"
-                  accept="image/jpeg, image/jpg, image/png"
-                  className="hidden"
-                  onChange={handleFileChange}
-                ></Input>
-              </div>
-              <div className="w-2/3 order-1">
-                <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl flex justify-center items-center">
-                  {image ? (
-                    <Image src={previewUrl} alt="image-preview" fill className="rounded-xl"></Image>
-                  ) : (
-                    <Image
-                      src={previewUrl}
-                      alt="image-preview"
-                      width={160}
-                      height={90}
-                      className="rounded-xl w-1/3"
-                    ></Image>
-                  )}
-                </AspectRatio>
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div className="w-full sm:w-2/3 order-1">
+                  <AspectRatio
+                    ratio={16 / 9}
+                    className="bg-muted rounded-xl flex justify-center items-center border-2 border-gray-300 dark:border-gray-700 shadow-sm overflow-hidden"
+                  >
+                    {image ? (
+                      <Image src={previewUrl} alt="image-preview" fill className="rounded-xl object-cover" />
+                    ) : (
+                      <Image
+                        src={previewUrl}
+                        alt="image-preview"
+                        width={160}
+                        height={90}
+                        className="rounded-xl w-1/3 object-cover"
+                      />
+                    )}
+                  </AspectRatio>
+                </div>
+                <div className="flex gap-2 order-2">
+                  <Button
+                    type="button"
+                    className="w-fit bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white border-2 border-blue-600 dark:border-blue-500 rounded-lg transition-colors"
+                    onClick={handleButtonClick}
+                  >
+                    Select
+                  </Button>
+                  <Button
+                    type="button"
+                    className="w-fit bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 text-red-500 border-2 border-gray-300 dark:border-gray-700 rounded-lg transition-colors"
+                    onClick={handleRemove}
+                  >
+                    Remove
+                  </Button>
+                  <Input
+                    ref={fileInputElement}
+                    id="picture"
+                    type="file"
+                    accept="image/jpeg, image/jpg, image/png"
+                    className="hidden"
+                    onChange={handleFileChange}
+                  />
+                </div>
               </div>
             </div>
 
-            <Button type="submit" disabled={isPending}>
+            <Button
+              type="submit"
+              className="cursor-pointer bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white border-2 border-blue-600 dark:border-blue-500 rounded-lg transition-colors"
+              disabled={isPending}
+            >
               Create Post
             </Button>
           </form>

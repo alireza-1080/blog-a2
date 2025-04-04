@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Card, CardContent } from '@/components/ui/card'
+import DeleteButton from '@/components/general/BlogPostCard/DeleteButton'
 
 type Params = Promise<{ id: string }>
 
@@ -40,58 +41,90 @@ const PostIdPage = async ({ params }: { params: Params }) => {
   const { post, userRole, userId } = data
 
   return (
-    <div className="max-w-3xl mx-auto py-8 px-4">
-      <Link href="/">
-        <Button variant={'secondary'} className="cursor-pointer">
-          Back to posts
-        </Button>
-      </Link>
+    <div className="max-w-3xl mx-auto py-12 px-6">
+  {/* Back Button */}
+  <Link href="/">
+    <Button 
+      variant="secondary" 
+      className="mb-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700"
+    >
+      Back to posts
+    </Button>
+  </Link>
 
-      <div className="mb-8 mt-6">
-        <h1 className="text-3xl font-bold tracking-tight mb-4">{post.title}</h1>
+  {/* Header Section */}
+  <div className="mb-12 mt-6 bg-gray-50 dark:bg-gray-800/50 border-2 border-gray-300 dark:border-gray-700 rounded-xl p-6 shadow-md">
+    <h1 className="text-3xl font-bold tracking-tight mb-4 text-gray-900 dark:text-gray-100">
+      {post.title}
+    </h1>
 
-        <div className="w-full flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <div className="relative size-10 overflow-hidden rounded-full">
-              <Image
-                src={`/${post.author.image}`}
-                width={100}
-                height={100}
-                alt={`@${post.author.username}`}
-                className="object-cover"
-                priority
-              ></Image>
-            </div>
-            <p className="font-medium">{`@${post.author.username}`}</p>
-          </div>
-          <p className="text-sm text-gray-500">
-            {new Intl.DateTimeFormat('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            }).format(new Date(post.createdAt))}
-          </p>
-        </div>
-      </div>
-
-      <AspectRatio ratio={16 / 9} className="w-full mb-8 rounded-lg overflow-hidden">
-        <Image src={`/${post.image}`} fill alt={post.title} priority></Image>
-      </AspectRatio>
-
-      <Card>
-        <CardContent>
-          <p>{post.content}</p>
-        </CardContent>
-      </Card>
-
-      {(userId === post.authorId || userRole === 'admin') && (
-        <div className="mx-auto w-1/2 mt-4">
-          <Button variant={'destructive'} className="w-full ">
-            Delete Post
-          </Button>
-        </div>
-      )}
+    <div className="w-full flex items-center justify-between">
+  <div className="flex items-center space-x-2">
+    <div className="relative size-9 overflow-hidden rounded-full ring-2 ring-gray-300 dark:ring-gray-600">
+      <Image
+        src={`/${post.author.image}`}
+        width={100}
+        height={100}
+        alt={`@${post.author.username}`}
+        className="object-cover"
+        priority
+      />
     </div>
+    <div>
+      <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+        {`@${post.author.username}`}
+      </span>
+      <span 
+        className={`text-xs ml-1.5 ${
+          post.author.role === 'admin' 
+            ? 'text-blue-600 dark:text-blue-500' 
+            : 'text-green-600 dark:text-green-500'
+        }`}
+      >
+        {post.author.role[0].toUpperCase() + post.author.role.slice(1)}
+      </span>
+    </div>
+  </div>
+  <time className="text-xs text-gray-500 dark:text-gray-400">
+    {new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(new Date(post.createdAt))}
+  </time>
+</div>
+  </div>
+
+  {/* Main Image */}
+  <AspectRatio 
+    ratio={16 / 9} 
+    className="w-full mb-12 rounded-xl overflow-hidden border-2 border-gray-300 dark:border-gray-700 shadow-md"
+  >
+    <Image 
+      src={`/${post.image}`} 
+      fill 
+      alt={post.title} 
+      className="object-cover"
+      priority
+    />
+  </AspectRatio>
+
+  {/* Content */}
+  <Card className="bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-700 rounded-xl shadow-md py-0">
+    <CardContent className="p-6 bg-gray-50 dark:bg-gray-800/50">
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        {post.content}
+      </p>
+    </CardContent>
+  </Card>
+
+  {/* Delete Button (Conditional) */}
+  {(userId === post.authorId || userRole === 'admin') && (
+    <div className="mt-8">
+      <DeleteButton articleId={post.id} />
+    </div>
+  )}
+</div>
   )
 }
 

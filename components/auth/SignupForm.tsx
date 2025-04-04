@@ -39,7 +39,7 @@ const SignupForm = () => {
   const handleRemoveClick = () => {
     setAvatar(null)
     if (fileInput.current) {
-      fileInput.current.value = ""
+      fileInput.current.value = ''
     }
   }
 
@@ -122,29 +122,65 @@ const SignupForm = () => {
   }, [avatar])
 
   return (
-    <form className="w-full flex flex-col items-center gap-5" onSubmit={formSubmitHandler}>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="username">Username</Label>
-        <Input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+    <form className="w-full flex flex-col items-center gap-6" onSubmit={formSubmitHandler}>
+      <div className="grid w-full max-w-sm items-center gap-2">
+        <Label htmlFor="username" className="text-gray-900 dark:text-gray-100 font-medium">
+          Username
+        </Label>
+        <Input
+          type="text"
+          id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent"
+        />
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="email">Email</Label>
-        <Input type="text" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+      <div className="grid w-full max-w-sm items-center gap-2">
+        <Label htmlFor="email" className="text-gray-900 dark:text-gray-100 font-medium">
+          Email
+        </Label>
+        <Input
+          type="text"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent"
+        />
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="avatar">Avatar</Label>
+
+      <div className="grid w-full max-w-sm items-center gap-2">
+        <Label htmlFor="avatar" className="text-gray-900 dark:text-gray-100 font-medium">
+          Avatar
+        </Label>
         <div className="flex justify-start items-center gap-4">
           <div className="flex flex-col gap-2 order-2">
-            <Button type="button" className="w-fit" onClick={handleSelectClick} size={'sm'}>
+            <Button
+              type="button"
+              className="w-fit bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white border-2 border-blue-600 dark:border-blue-500 rounded-lg transition-colors"
+              onClick={handleSelectClick}
+              size={'sm'}
+            >
               Select
             </Button>
-            <Button type="button" className="w-fit" variant={'outline'} size={'sm'} onClick={handleRemoveClick}>
-              <h3 className="text-red-500">Remove</h3>
+            <Button
+              type="button"
+              className="w-fit bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 text-red-500 border-2 border-gray-300 dark:border-gray-700 rounded-lg transition-colors"
+              onClick={handleRemoveClick}
+              size={'sm'}
+            >
+              Remove
             </Button>
           </div>
-          <div className="w-28 h-28 order-1 rounded-full border-2">
+          <div className="w-28 h-28 order-1 rounded-full border-2 border-gray-300 dark:border-gray-700 overflow-hidden shadow-sm">
             <AspectRatio ratio={1 / 1}>
-              <Image src={previewUrl} width={100} height={100} alt="avatar preview" className='w-full h-full rounded-full'></Image>
+              <Image
+                src={previewUrl}
+                width={100}
+                height={100}
+                alt="avatar preview"
+                className="w-full h-full rounded-full object-cover"
+              />
             </AspectRatio>
           </div>
         </div>
@@ -157,21 +193,39 @@ const SignupForm = () => {
           className="hidden"
         />
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="password">Password</Label>
-        <Input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+      <div className="grid w-full max-w-sm items-center gap-2">
+        <Label htmlFor="password" className="text-gray-900 dark:text-gray-100 font-medium">
+          Password
+        </Label>
+        <Input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent"
+        />
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="confirmPassword">Confirm password</Label>
+
+      <div className="grid w-full max-w-sm items-center gap-2">
+        <Label htmlFor="confirmPassword" className="text-gray-900 dark:text-gray-100 font-medium">
+          Confirm Password
+        </Label>
         <Input
           type="password"
           id="confirmPassword"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent"
         />
       </div>
-      <Button type="submit" className="cursor-pointer" disabled={isPending}>
-        Sign up
+
+      <Button
+        type="submit"
+        className="cursor-pointer bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white border-2 border-blue-600 dark:border-blue-500 rounded-lg transition-colors w-full max-w-sm"
+        disabled={isPending}
+      >
+        Sign Up
       </Button>
     </form>
   )

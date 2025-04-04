@@ -37,12 +37,12 @@ const Dashboard = async () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-medium">Your Blog Articles</h2>
+      <h2 className="text-3xl font-bold tracking-tight mb-10 text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 border-2 border-gray-300 dark:border-gray-700 rounded-xl p-4 shadow-md flex items-center justify-between">
+        Your Blog Articles
         <Link href={'/dashboard/create'}>
           <Button className="cursor-pointer">Create Post</Button>
         </Link>
-      </div>
+      </h2>
 
       {posts.length !== 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
