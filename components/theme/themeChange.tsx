@@ -5,7 +5,7 @@ import { Moon, Sun } from 'lucide-react'
 
 const Theme = () => {
   const { setTheme, systemTheme } = useTheme()
-  const [themMode, setThemeMode] = React.useState<'light' | 'dark' >(systemTheme || 'dark')
+  const [themMode, setThemeMode] = React.useState<'light' | 'dark' >('dark')
 
   const clickHandler = (): void => {
     if (themMode === 'light') {
@@ -17,8 +17,15 @@ const Theme = () => {
 
   React.useEffect(() => {
     setTheme(themMode)
+
     // eslint-disable-next-line
   }, [themMode])
+
+  React.useEffect(() => {
+    setThemeMode(systemTheme || 'dark')
+
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <div onClick={clickHandler} className="size-9 rounded-full flex justify-center items-center dark:border-white cursor-pointer">
