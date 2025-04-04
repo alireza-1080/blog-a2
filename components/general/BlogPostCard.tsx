@@ -14,11 +14,14 @@ type Post = {
   title: string
   content: string
   image: string
+  imagePath: string
+  authorId: string
+  createdAt: string
+  updatedAt: string
   author: Author
-  createdAt: Date
 }
 
-const BlogPostCard = ({ post }: { post: Post }) => {
+const BlogPostCard = ({ post }: {post: Post}) => {
   return (
     <div className="group relative overflow-hidden rounded-xl border-2 border-gray-300 dark:border-gray-700 shadow-md transition-all hover:shadow-2xl bg-white dark:bg-gray-900">
   <Link href={`/post/${post.id}`} className="block w-full h-full">

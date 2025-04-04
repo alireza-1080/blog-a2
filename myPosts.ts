@@ -247,4 +247,5 @@ In short, Node.js is the unsung hero of BlogA2. It’s the runtime that powers t
   },
 ]
 
+export type { Post }
 export default posts
