@@ -82,7 +82,7 @@ const MongoDBPage = () => {
                 What Is MongoDB?
               </h2>
               <p className="text-base">
-                At its core, MongoDB is designed to handle unstructured or semi-structured data with ease. Instead of predefined schemas, it lets you store "documents" in collections—think of these as dynamic, self-contained records that can vary in structure. For example, one document might hold a user’s name and email, while another could include additional fields like article titles or timestamps, all without breaking a sweat.
+                At its core, MongoDB is designed to handle unstructured or semi-structured data with ease. Instead of predefined schemas, it lets you store &quote;documents&quote; in collections—think of these as dynamic, self-contained records that can vary in structure. For example, one document might hold a user’s name and email, while another could include additional fields like article titles or timestamps, all without breaking a sweat.
               </p>
               <p className="mt-2">
                 It’s also highly scalable. Whether you’re running a small project like BlogA2 or a massive app with millions of users, MongoDB can grow with you, thanks to its ability to distribute data across servers.

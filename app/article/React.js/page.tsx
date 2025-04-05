@@ -83,8 +83,7 @@ const ReactJsPage = () => {
               </h2>
               <p className="text-base">
                 React.js is designed to make building UIs easier and more efficient. It lets you break down your 
-                {/* eslint-disable-next-line */}
-                interface into reusable "components"—self-contained pieces of code that manage their own logic and appearance. For example, in BlogA2, I might have a Navbar component for navigation, an ArticleList component to display posts, and a LoginForm component for user authentication.
+                interface into reusable &quote;components&quote;—self-contained pieces of code that manage their own logic and appearance. For example, in BlogA2, I might have a Navbar component for navigation, an ArticleList component to display posts, and a LoginForm component for user authentication.
               </p>
               <p className="mt-2">
                 What sets React apart is its virtual DOM (Document Object Model). Instead of directly updating the browser’s DOM every time something changes—which can be slow—React creates a lightweight copy, figures out what’s different, and updates only what’s necessary. The result? A snappy, responsive experience for users.

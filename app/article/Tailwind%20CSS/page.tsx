@@ -115,8 +115,7 @@ const TailwindCssPage = () => {
                 <li>
                   Rapid Development: For a project like BlogA2, where I wanted to focus on functionality (like article
                   publishing), Tailwind lets me style components quickly without leaving my HTML or React files. A
-                  {/* eslint-disable-next-line */}
-                  button can be styled with className="bg-green-500 text-white p-2 rounded"—done in seconds.
+                  button can be styled with className=&quote;bg-green-500 text-white p-2 rounded&quote;—done in seconds.
                 </li>
                 <li>
                   Consistency: Tailwind’s predefined classes (e.g., spacing scales or color palettes) ensure a uniform
@@ -159,10 +158,7 @@ const TailwindCssPage = () => {
                 Why Not Always Use It? Tailwind isn’t for everyone or every project. Its class-heavy approach can make
                 HTML look cluttered—
                 <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">
-                  {/* eslint-disable-next-line */}
-                  &lt;div className="flex
-                  {/* eslint-disable-next-line */}
-                  justify-between items-center p-4 bg-gray-100"&gt;
+                  &lt;div className=&quote;flex justify-between items-center p-4 bg-gray-100&quote;&gt;
                 </code>{' '}
                 takes getting used to. For BlogA2, where I might’ve wanted to practice raw CSS or keep things
                 ultra-minimal, plain styles or a lighter framework could make sense. Tailwind shines in bigger projects
