@@ -30,8 +30,8 @@ That said, there’s a catch. Since there are always individuals out there who m
 The only articles available to the public are the ones I publish myself. These focus on the programming technologies I use, offering insights into the tools and techniques behind BlogA2. It’s a way to share knowledge while keeping the project’s scope manageable.
 
 I’m fully aware that I could’ve added a ton of extra features to this website—think advanced editing tools, social sharing options, or even a comment section. But I deliberately kept it minimal. My goal wasn’t to build a full-fledged platform but to create a quick preview of what a simple article-publishing website could look like. BlogA2 is a proof of concept, a snapshot of my skills, and a stepping stone for bigger things.`,
-    image: 'articlesImages/Bloga2.png',
-    imagePath: '/articlesImages/Bloga2.png',
+    image: 'articlesImages/BlogA2.png',
+    imagePath: 'articlesImages/BlogA2.png',
     authorId: '67ee782f03ead11d51257a7e',
     createdAt: '2025-04-04T10:41:44.186+00:00',
     updatedAt: '2025-04-04T10:41:44.186+00:00',
@@ -233,7 +233,7 @@ Why Not Something Else?
 I could’ve used Python with Django or Ruby on Rails, but those would’ve meant learning new languages and frameworks for a small project. Node.js leverages my existing JavaScript knowledge, aligns with the MERN stack, and gets the job done without extra complexity.
 
 In short, Node.js is the unsung hero of BlogA2. It’s the runtime that powers the backend, connects the dots between my tools, and keeps everything humming along. For a practice site meant to showcase my full-stack skills, it’s been the perfect choice.`,
-    image: '/articlesImages/Nodejs.png',
+    image: 'articlesImages/Nodejs.png',
     imagePath: 'articlesImages/Nodejs.png',
     authorId: '67ee782f03ead11d51257a7e',
     createdAt: '2025-04-04T12:43:15.803+00:00',
@@ -470,8 +470,8 @@ There aren’t many direct TypeScript alternatives—Flow exists, but it’s les
 
 In short, TypeScript is my secret weapon for BlogA2. It catches bugs, clarifies my code, and scales with my ambitions—all while fitting snugly into the MERN stack. Whether I’m tweaking this practice site or tackling a massive app, TypeScript’s got my back.
 `,
-    image: 'articlesImages/TypeScript.png',
-    imagePath: 'articlesImages/TypeScript.png',
+    image: 'articlesImages/Typescript.png',
+    imagePath: 'articlesImages/Typescript.png',
     authorId: '67ee782f03ead11d51257a7e',
     createdAt: '2025-04-04T12:43:15.803+00:00',
     updatedAt: '2025-04-04T12:43:15.803+00:00',
