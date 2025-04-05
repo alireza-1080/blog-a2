@@ -233,7 +233,7 @@ Why Not Something Else?
 I could’ve used Python with Django or Ruby on Rails, but those would’ve meant learning new languages and frameworks for a small project. Node.js leverages my existing JavaScript knowledge, aligns with the MERN stack, and gets the job done without extra complexity.
 
 In short, Node.js is the unsung hero of BlogA2. It’s the runtime that powers the backend, connects the dots between my tools, and keeps everything humming along. For a practice site meant to showcase my full-stack skills, it’s been the perfect choice.`,
-    image: 'articlesImages/Nodejs.png',
+    image: '/articlesImages/Nodejs.png',
     imagePath: 'articlesImages/Nodejs.png',
     authorId: '67ee782f03ead11d51257a7e',
     createdAt: '2025-04-04T12:43:15.803+00:00',
