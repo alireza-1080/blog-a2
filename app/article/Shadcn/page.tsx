@@ -56,7 +56,7 @@ const ShadcnPage = () => {
           <Image
             src="/articlesImages/Shadcn.png"
             fill
-            alt="Shadcn: Custom UI Without the Baggage"
+            alt="Shadcn: Crafting BlogA2’s UI"
             className="object-cover"
             priority
           />
@@ -72,7 +72,7 @@ const ShadcnPage = () => {
                 Shadcn Overview
               </h2>
               <p className="text-base">
-                shadcn/ui is a unique and increasingly popular tool in the web development world, and it’s one I’ve been keeping an eye on as I explore modern UI solutions. Unlike traditional component libraries that you install as an npm package, shadcn/ui flips the script: it’s a collection of beautifully designed, accessible React components that you copy and paste directly into your codebase. Built on top of Radix UI and Tailwind CSS, it’s less about dependency management and more about giving developers full ownership of their UI.
+                shadcn/ui is a unique tool I’ve integrated into BlogA2 to craft a polished, accessible frontend. Unlike traditional component libraries that come as npm packages, shadcn/ui offers a collection of beautifully designed React components—built on Radix UI and styled with Tailwind CSS—that I’ve copied directly into my codebase. This approach gives me full control over my UI, making it a perfect fit for my Next.js-powered MERN stack project.
               </p>
             </div>
 
@@ -82,23 +82,23 @@ const ShadcnPage = () => {
                 What Is shadcn/ui?
               </h2>
               <p className="text-base">
-                At its heart, shadcn/ui isn’t a typical library—it’s a system for building your own component library. Created by a developer known as shadcn, it provides a set of reusable components like buttons, forms, modals, and more, all styled with Tailwind CSS and powered by Radix UI’s unstyled, accessible primitives. The twist? Instead of importing them from a package, you use a CLI tool (or manually copy the code) to bring the source files into your project. From there, they’re yours to customize, maintain, and extend.
+                shadcn/ui, created by a developer known as shadcn, isn’t your typical library—it’s a system for building your own component library. It provides reusable components like buttons, forms, modals, and tabs, all powered by Radix UI’s unstyled, accessible primitives and styled with Tailwind CSS. Instead of installing a package, I use its CLI (or manually copy the code) to bring the raw component files into BlogA2. From there, I own them—free to tweak, extend, or maintain as I see fit.
               </p>
               <p className="mt-2">
-                Key features include:
+                Key features in BlogA2 include:
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>
-                  Open Code: You get the raw component code, not a black-box package, so you can tweak every detail.
+                  Open Code: I’ve got the full source, not a locked-down package, so I can customize every detail.
                 </li>
                 <li>
-                  Accessibility: Built with Radix UI, it ensures components meet modern accessibility standards out of the box.
+                  Accessibility: Radix UI ensures BlogA2’s components meet modern standards—like keyboard navigation—out of the box.
                 </li>
                 <li>
-                  Tailwind Integration: Styling is handled with Tailwind’s utility classes, making it fast to adjust designs.
+                  Tailwind Integration: Styling with Tailwind classes keeps BlogA2’s look consistent and fast to adjust.
                 </li>
                 <li>
-                  Framework Flexibility: It works with React-based setups like Next.js, Vite, and Remix, fitting into my JavaScript-centric workflow.
+                  Next.js Compatibility: It slots perfectly into my Next.js setup, enhancing my React frontend.
                 </li>
               </ul>
             </div>
@@ -106,23 +106,26 @@ const ShadcnPage = () => {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
                 <Rocket className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
-                Why I’m Intrigued by shadcn/ui
+                Why I’m Using shadcn/ui in BlogA2
               </h2>
               <p className="text-base">
-                As someone who built BlogA2 to showcase my skills, shadcn/ui appeals to me for a few reasons:
+                shadcn/ui has been a standout choice for BlogA2, and here’s why I went with it:
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
                 <li>
-                  Total Control: In BlogA2, I used React for the frontend and Express.js for the backend. With shadcn/ui, I could’ve grabbed components like a Card or Dialog, dropped them into my project, and styled them to match my vision—no fighting with third-party library constraints.
+                  Total Control: In BlogA2, I needed a custom UI for features like the user panel and login form. shadcn/ui gave me components like Card and Dialog that I dropped in and styled with Tailwind to match my vision—no wrestling with third-party constraints.
                 </li>
                 <li>
-                  No Dependency Hell: Traditional libraries tie you to their update cycles. shadcn/ui sidesteps this by making the code mine from day one, which suits a practice project like BlogA2 where I want simplicity.
+                  No Dependency Overhead: Traditional libraries mean version updates and bloat. With shadcn/ui, the code is mine from day one, keeping BlogA2 lightweight and simple—ideal for a practice project.
                 </li>
                 <li>
-                  Design Meets Function: The default styles are clean and modern, thanks to Tailwind, but I can override them easily. For a site like BlogA2, this balance could’ve made the UI pop without much extra effort.
+                  Design Meets Function: The default styles are sleek and modern, thanks to Tailwind, but I’ve tweaked them to fit BlogA2. It’s made the UI pop with minimal effort.
                 </li>
                 <li>
-                  Learning Value: Exploring shadcn/ui teaches me how to structure reusable components—a skill that’s gold for my portfolio and future gigs.
+                  Learning Value: Using shadcn/ui in BlogA2 has taught me how to structure reusable components—a skill that’s gold for my portfolio and future work.
+                </li>
+                <li>
+                  MERN Synergy: Paired with Next.js, Tailwind, and my Express.js backend, shadcn/ui fits right into my JavaScript-driven stack.
                 </li>
               </ul>
             </div>
@@ -130,20 +133,38 @@ const ShadcnPage = () => {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
                 <Globe className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
-                How It Could Work in BlogA2 and Beyond
+                How It Works in BlogA2 and Why It Fits
               </h2>
               <p className="text-base">
-                Picture BlogA2 with shadcn/ui: the user panel could use a Tabs component to switch between article lists and settings, styled with Tailwind classes like bg-gray-100 p-4 rounded. The login form could lean on a Form component with built-in validation, connected to my Express.js backend. Since BlogA2’s articles are private, a Drawer component could slide out to show drafts, keeping the interface sleek.
+                shadcn/ui brings BlogA2’s frontend to life:
+              </p>
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>
+                  User Panel: I’ve used the Tabs component to let users switch between their article list and settings, styled with bg-gray-100 p-4 rounded for a clean look.
+                </li>
+                <li>
+                  Login Form: The Form component handles input with built-in validation, tied to my Next.js API routes or Express.js backend, and styled with flex flex-col gap-4.
+                </li>
+                <li>
+                  Article Previews: A Card component wraps each article, with Tailwind classes like shadow-md hover:shadow-lg p-4 for a subtle hover effect.
+                </li>
+                <li>
+                  Drafts Drawer: Since BlogA2 keeps articles private, I’ve added a Drawer that slides out to show drafts, keeping the interface uncluttered.
+                </li>
+              </ul>
+              <p className="mt-2">
+                I brought these components into BlogA2 via the shadcn/ui CLI—running commands like npx shadcn-ui@latest add tabs—and customized them to suit my needs.
               </p>
               <p className="mt-2">
-                I stuck with a basic MERN stack for BlogA2 to keep it straightforward, but shadcn/ui could’ve been a lightweight way to polish the frontend without adding a heavy dependency.
+                Why It Fits BlogA2
+                For a practice site like BlogA2, shadcn/ui is a lightweight yet powerful addition. I wanted to focus on the MERN stack’s core functionality, but I also needed a decent UI. shadcn/ui gave me pre-built, accessible components that I could adapt fast, saving time while still showcasing my ability to craft a custom frontend. It’s a perfect complement to Next.js and Tailwind.
               </p>
               <p className="mt-2">
-                Why Not Use It Everywhere?
-                shadcn/ui isn’t perfect for every scenario. For BlogA2, where I wanted to practice raw React and CSS, it might’ve felt like a shortcut. Plus, since you own the components, you’re also responsible for fixing bugs or keeping them updated—fine for a maintained project, less so for a quick demo. And if you’re not using Tailwind already, the learning curve might slow you down.
+                Why Not Something Else?
+                I could’ve used a library like Material-UI, but its pre-styled components didn’t fit BlogA2’s custom vibe, and I’d be tied to its ecosystem. Raw React with Tailwind worked, but shadcn/ui saved me from building components from scratch while keeping full ownership. It’s the best of both worlds for this project.
               </p>
               <p className="mt-2">
-                In short, shadcn/ui is a breath of fresh air for developers like me who want flexibility, accessibility, and good design without the baggage of traditional libraries. It’s not in BlogA2 yet, but it’s definitely on my list for future projects where I want to build a custom UI fast and keep it my own.
+                In short, shadcn/ui has elevated BlogA2’s frontend with flexibility, accessibility, and style. It’s let me build a custom UI that’s mine to control, seamlessly integrated with Next.js and Tailwind. For a practice project meant to flex my skills, it’s been a brilliant addition—and a tool I’ll keep using moving forward.
               </p>
             </div>
           </div>
