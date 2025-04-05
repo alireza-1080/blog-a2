@@ -54,7 +54,7 @@ const BlogA2Page = () => {
           className="rounded-xl overflow-hidden border-2 border-gray-300 dark:border-gray-700 shadow-md"
         >
           <Image
-            src="/articlesImages/Bloga2.png"
+            src="/articlesImages/BlogA2.png"
             fill
             alt="What is BlogA2: A Showcase of Simplicity and Skill"
             className="object-cover"

@@ -54,7 +54,7 @@ const TypeScriptPage = () => {
           className="rounded-xl overflow-hidden border-2 border-gray-300 dark:border-gray-700 shadow-md"
         >
           <Image
-            src="/articlesImages/TypeScript.png"
+            src="/articlesImages/Typescript.png"
             fill
             alt="TypeScript: Typing Up BlogA2"
             className="object-cover"
