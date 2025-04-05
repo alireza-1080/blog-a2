@@ -1,6 +1,6 @@
 import React from 'react'
 import posts from '@/myPosts'
-import BlogPostCard from '@/components/general/BlogPostCard'
+import BlogPostCardHome from '@/components/general/BlogPostCardHome'
 
 const Home = async () => {
   await new Promise((resolver) => setTimeout(resolver, 1000))
@@ -15,7 +15,7 @@ const Home = async () => {
       {posts.length !== 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <BlogPostCard post={post} key={post.id} />
+            <BlogPostCardHome post={post} key={post.id} />
           ))}
         </div>
       ) : (

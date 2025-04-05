@@ -20,7 +20,7 @@ type Post = {
 const posts: Post[] = [
   {
     id: '67efb768d7fe106c83ce351f',
-    title: 'What is BlogA2?',
+    title: 'What is BlogA2',
     content: `I created BlogA2 as a practice website, utilizing the technologies and skills I’ve mastered, to serve as both a portfolio piece and a sample of my work. This project was designed to showcase my abilities in web development while keeping things simple yet functional.
 
 BlogA2 is equipped with a backend system that allows it to store the data you input. Once you log into your account, you can access the articles you’ve published from any device—be it a mobile phone, computer, or anything else. This cross-device accessibility ensures a seamless user experience.
@@ -332,7 +332,7 @@ In short, Tailwind CSS is a styling superpower I’m excited to wield. It’s fa
   },
   {
     id: '67efb768d7fe106c83ce351n',
-    title: 'Shadcn/ui',
+    title: 'Shadcn',
     content: `shadcn/ui is a unique and increasingly popular tool in the web development world, and it’s one I’ve been keeping an eye on as I explore modern UI solutions. Unlike traditional component libraries that you install as an npm package, shadcn/ui flips the script: it’s a collection of beautifully designed, accessible React components that you copy and paste directly into your codebase. Built on top of Radix UI and Tailwind CSS, it’s less about dependency management and more about giving developers full ownership of their UI.
 
 What Is shadcn/ui?

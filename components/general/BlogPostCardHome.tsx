@@ -21,10 +21,10 @@ type Post = {
   author: Author
 }
 
-const BlogPostCard = ({ post }: {post: Post}) => {
+const BlogPostCardHome = ({ post }: {post: Post}) => {
   return (
     <div className="group relative overflow-hidden rounded-xl border-2 border-gray-300 dark:border-gray-700 shadow-md transition-all hover:shadow-2xl bg-white dark:bg-gray-900">
-  <Link href={`/article/${post.id}`} className="block w-full h-full">
+  <Link href={`/article/${post.title}`} className="block w-full h-full">
     {/* Image Container */}
     <div className="relative h-56 w-full overflow-hidden border-b-2 border-gray-300 dark:border-gray-700">
       <Image
@@ -85,4 +85,4 @@ const BlogPostCard = ({ post }: {post: Post}) => {
   )
 }
 
-export default BlogPostCard
+export default BlogPostCardHome

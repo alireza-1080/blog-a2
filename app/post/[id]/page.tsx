@@ -43,7 +43,7 @@ const PostIdPage = async ({ params }: { params: Params }) => {
   return (
     <div className="max-w-3xl mx-auto py-12 px-6">
   {/* Back Button */}
-  <Link href="/">
+  <Link href="/dashboard">
     <Button 
       variant="secondary" 
       className="mb-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700"
