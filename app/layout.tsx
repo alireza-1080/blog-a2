@@ -4,7 +4,6 @@ import './globals.css'
 import Navbar from '@/components/general/Navbar'
 import { Toaster } from 'react-hot-toast'
 import ThemeProvider from '@/components/theme/them-Provider'
-import { Metadata } from 'next'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
