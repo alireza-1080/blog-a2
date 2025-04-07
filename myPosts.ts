@@ -1,26 +1,26 @@
 type Author = {
-  username: string
-  role: string
-  image: string
-  id: string
-}
+  username: string;
+  role: string;
+  image: string;
+  id: string;
+};
 
 type Post = {
-  id: string
-  title: string
-  content: string
-  image: string
-  imagePath: string
-  authorId: string
-  createdAt: string
-  updatedAt: string
-  author: Author
-}
+  id: string;
+  title: string;
+  content: string;
+  image: string;
+  imagePath: string;
+  authorId: string;
+  createdAt: string;
+  updatedAt: string;
+  author: Author;
+};
 
 const posts: Post[] = [
   {
-    id: '67efb768d7fe106c83ce351f',
-    title: 'What is BlogA2',
+    id: "67efb768d7fe106c83ce351f",
+    title: "What is BlogA2",
     content: `I created BlogA2 as a practice website, utilizing the technologies and skills I’ve mastered, to serve as both a portfolio piece and a sample of my work. This project was designed to showcase my abilities in web development while keeping things simple yet functional.
 
 BlogA2 is equipped with a backend system that allows it to store the data you input. Once you log into your account, you can access the articles you’ve published from any device—be it a mobile phone, computer, or anything else. This cross-device accessibility ensures a seamless user experience.
@@ -30,21 +30,21 @@ That said, there’s a catch. Since there are always individuals out there who m
 The only articles available to the public are the ones I publish myself. These focus on the programming technologies I use, offering insights into the tools and techniques behind BlogA2. It’s a way to share knowledge while keeping the project’s scope manageable.
 
 I’m fully aware that I could’ve added a ton of extra features to this website—think advanced editing tools, social sharing options, or even a comment section. But I deliberately kept it minimal. My goal wasn’t to build a full-fledged platform but to create a quick preview of what a simple article-publishing website could look like. BlogA2 is a proof of concept, a snapshot of my skills, and a stepping stone for bigger things.`,
-    image: 'articlesImages/BlogA2.png',
-    imagePath: 'articlesImages/BlogA2.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T10:41:44.186+00:00',
-    updatedAt: '2025-04-04T10:41:44.186+00:00',
+    image: "articlesImages/BlogA2.png",
+    imagePath: "articlesImages/BlogA2.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T10:41:44.186+00:00",
+    updatedAt: "2025-04-04T10:41:44.186+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351g',
-    title: 'MERN Stack',
+    id: "67efb768d7fe106c83ce351g",
+    title: "MERN Stack",
     content: `The MERN stack is a popular set of technologies used to build modern, full-stack web applications. It’s an acronym that stands for MongoDB, Express.js, React, and Node.js. Together, these four tools create a powerful, JavaScript-based ecosystem that allows developers like me to craft dynamic and efficient websites from front to back—all while sticking to a single programming language.
 
 Breaking It Down
@@ -64,21 +64,21 @@ Why It Fits BlogA2
 For a project like BlogA2, where I wanted a simple yet functional site to showcase my abilities, MERN was a natural fit. It allowed me to quickly set up a backend to store user data (like articles), build a responsive frontend for viewing them, and tie it all together without overcomplicating things. I didn’t need a massive feature set—just a clean, working example of what I can do—and MERN delivered exactly that.
 
 In short, the MERN stack is my go-to because it’s versatile, efficient, and lets me focus on building rather than wrestling with tools. Whether it’s a practice site like BlogA2 or something bigger down the road, it’s a stack I’ll keep coming back to.`,
-    image: 'articlesImages/Mern.png',
-    imagePath: 'articlesImages/Mern.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Mern.png",
+    imagePath: "articlesImages/Mern.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351h',
-    title: 'MongoDB',
+    id: "67efb768d7fe106c83ce351h",
+    title: "MongoDB",
     content: `MongoDB is a leading NoSQL database that I’ve chosen to use in BlogA2, and for good reason. Unlike traditional relational databases that store data in rigid tables with rows and columns, MongoDB takes a more flexible approach. It’s document-oriented, meaning it stores data in JSON-like structures called BSON (Binary JSON). This makes it a perfect fit for modern web applications like mine.
 
 What Is MongoDB?
@@ -101,21 +101,21 @@ Why Not Something Else?
 Sure, I could’ve gone with a relational database like MySQL or PostgreSQL, but those are better suited for projects with highly structured data and complex relationships. BlogA2 didn’t need that level of rigidity—MongoDB’s flexibility and simplicity made it the smarter choice for a lightweight site like this.
 
 In short, MongoDB is the backbone of BlogA2’s data storage. It’s fast, flexible, and fits perfectly into the MERN stack I’m using. For a practice project meant to showcase my skills, it’s exactly what I needed.`,
-    image: 'articlesImages/MongoDB.png',
-    imagePath: 'articlesImages/MongoDB.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/MongoDB.png",
+    imagePath: "articlesImages/MongoDB.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351i',
-    title: 'Express.js',
+    id: "67efb768d7fe106c83ce351i",
+    title: "Express.js",
     content: `Express.js is a minimalist web framework for Node.js, and it’s one of the key technologies I’ve used to build the backend of BlogA2. Known for its simplicity and flexibility, Express.js makes it easy to create robust server-side applications and APIs, which is exactly what I needed for this practice project.
 
 What Is Express.js?
@@ -143,21 +143,21 @@ Why Not Something Else?
 There are other frameworks out there—like Koa or NestJS—but Express.js won out for BlogA2 because of its simplicity and widespread use. It’s not overkill for a small project, and it’s a skill that’s highly transferable to bigger ones. Plus, it’s the go-to choice for MERN stack development, which aligns with my goals.
 
 In short, Express.js is the unsung hero of BlogA2’s backend. It’s fast to set up, easy to use, and gets the job done without unnecessary complexity. For a practice site meant to showcase my skills, it’s been a perfect fit.`,
-    image: 'articlesImages/Expressjs.png',
-    imagePath: 'articlesImages/Expressjs.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Expressjs.png",
+    imagePath: "articlesImages/Expressjs.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351j',
-    title: 'React.js',
+    id: "67efb768d7fe106c83ce351j",
+    title: "React.js",
     content: `React.js is a powerful JavaScript library that I’ve used to build the frontend of BlogA2. Developed by Facebook, it’s all about creating fast, interactive user interfaces with a component-based approach. For a practice project like BlogA2, React.js was the ideal choice to bring the site to life on the client side.
 
 What Is React.js?
@@ -186,21 +186,21 @@ Why Not Something Else?
 There are other options like Vue.js or Angular, but React won out for BlogA2. Vue is great but less dominant in the job market, while Angular feels heavier than I needed for a lightweight project. React strikes the right balance—powerful yet approachable, and perfectly suited for the MERN stack.
 
 In short, React.js is the beating heart of BlogA2’s frontend. It’s fast, flexible, and lets me build a clean, functional interface with minimal effort. For a practice site meant to showcase my skills, it’s been a game-changer.`,
-    image: 'articlesImages/Reactjs.png',
-    imagePath: 'articlesImages/Reactjs.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Reactjs.png",
+    imagePath: "articlesImages/Reactjs.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351k',
-    title: 'Node.js',
+    id: "67efb768d7fe106c83ce351k",
+    title: "Node.js",
     content: `Here’s an English article about Node.js, written for your website based on your request:
 
 Node.js: The Engine Behind BlogA2
@@ -233,21 +233,21 @@ Why Not Something Else?
 I could’ve used Python with Django or Ruby on Rails, but those would’ve meant learning new languages and frameworks for a small project. Node.js leverages my existing JavaScript knowledge, aligns with the MERN stack, and gets the job done without extra complexity.
 
 In short, Node.js is the unsung hero of BlogA2. It’s the runtime that powers the backend, connects the dots between my tools, and keeps everything humming along. For a practice site meant to showcase my full-stack skills, it’s been the perfect choice.`,
-    image: 'articlesImages/Nodejs.png',
-    imagePath: 'articlesImages/Nodejs.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Nodejs.png",
+    imagePath: "articlesImages/Nodejs.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351l',
-    title: 'Next.js',
+    id: "67efb768d7fe106c83ce351l",
+    title: "Next.js",
     content: `Next.js is the React-based framework I’ve chosen to build BlogA2, and it’s been a game-changer for this practice project. By extending React with server-side rendering, static site generation, and a streamlined development experience, Next.js has allowed me to create a fast, functional site that showcases my skills within the MERN stack.
 
 What Is Next.js?
@@ -276,21 +276,21 @@ I could’ve stuck with plain React and a separate Express.js server, but Next.j
 
 In short, Next.js is the engine driving BlogA2. It’s fast, flexible, and lets me showcase a modern MERN stack app with minimal fuss. From static public pages to dynamic user panels, it’s proven itself as the right tool for this project—and a skill I’ll carry into future ones.
 `,
-    image: 'articlesImages/Nextjs.png',
-    imagePath: 'articlesImages/Nextjs.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Nextjs.png",
+    imagePath: "articlesImages/Nextjs.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351m',
-    title: 'Tailwind CSS',
+    id: "67efb768d7fe106c83ce351m",
+    title: "Tailwind CSS",
     content: `Tailwind CSS is the utility-first CSS framework I’ve chosen to style BlogA2, and it’s been a perfect match for this practice project. By leveraging its vast collection of low-level utility classes, I’ve been able to craft a clean, responsive, and cohesive design for BlogA2 without the hassle of traditional CSS—making my MERN stack app look as good as it works.
 
 What Is Tailwind CSS?
@@ -322,21 +322,21 @@ Why Not Something Else?
 I could’ve used plain CSS for BlogA2 to practice fundamentals, but that’d mean more time on stylesheets and less on functionality. Bootstrap was an option, but its pre-made components felt too rigid for BlogA2’s custom needs. Tailwind’s utility approach gave me speed and freedom—exactly what I wanted.
 
 In short, Tailwind CSS is my styling superpower for BlogA2. It’s fast, flexible, and turns my Next.js and React frontend into a sleek, user-friendly experience. From login forms to article grids, it’s helped me build a site that’s as visually appealing as it is functional—all while keeping development a breeze.`,
-    image: 'articlesImages/Tailwindcss.png',
-    imagePath: 'articlesImages/Tailwindcss.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Tailwindcss.png",
+    imagePath: "articlesImages/Tailwindcss.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351n',
-    title: 'Shadcn',
+    id: "67efb768d7fe106c83ce351n",
+    title: "Shadcn",
     content: `shadcn/ui is a unique tool I’ve integrated into BlogA2 to craft a polished, accessible frontend. Unlike traditional component libraries that come as npm packages, shadcn/ui offers a collection of beautifully designed React components—built on Radix UI and styled with Tailwind CSS—that I’ve copied directly into my codebase. This approach gives me full control over my UI, making it a perfect fit for my Next.js-powered MERN stack project.
 
 What Is shadcn/ui?
@@ -372,21 +372,21 @@ Why Not Something Else?
 I could’ve used a library like Material-UI, but its pre-styled components didn’t fit BlogA2’s custom vibe, and I’d be tied to its ecosystem. Raw React with Tailwind worked, but shadcn/ui saved me from building components from scratch while keeping full ownership. It’s the best of both worlds for this project.
 
 In short, shadcn/ui has elevated BlogA2’s frontend with flexibility, accessibility, and style. It’s let me build a custom UI that’s mine to control, seamlessly integrated with Next.js and Tailwind. For a practice project meant to flex my skills, it’s been a brilliant addition—and a tool I’ll keep using moving forward.`,
-    image: 'articlesImages/Shadcn.png',
-    imagePath: 'articlesImages/Shadcn.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Shadcn.png",
+    imagePath: "articlesImages/Shadcn.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351o',
-    title: 'Prisma',
+    id: "67efb768d7fe106c83ce351o",
+    title: "Prisma",
     content: `Prisma is a next-generation ORM (Object-Relational Mapping) tool that I’ve explored to manage my MongoDB database, including in projects like BlogA2. It’s designed to simplify database interactions, offering type safety, an intuitive query API, and a clean way to define data models—all while working seamlessly with MongoDB, a NoSQL database I already use in my MERN stack.
 
 What Is Prisma?
@@ -402,21 +402,21 @@ Schema-Driven Development: I define my models (like User and Post) in a schema.p
 Easy Queries: Prisma’s API is straightforward. Fetching a user’s articles in BlogA2 could be as simple as prisma.user.findUnique({ where: { id }, include: { posts: true } })—no complex MongoDB syntax required.
 MERN Compatibility: Prisma slots right into my MERN stack (MongoDB, Express.js, React, Node.js). It talks to MongoDB via the backend, leaving my React frontend unchanged.
 Less Boilerplate: Compared to setting up Mongoose schemas or raw MongoDB connections, Prisma cuts down on repetitive code, letting me focus on building features like article publishing.`,
-    image: 'articlesImages/Prisma.png',
-    imagePath: 'articlesImages/Prisma.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Prisma.png",
+    imagePath: "articlesImages/Prisma.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351p',
-    title: 'Redux',
+    id: "67efb768d7fe106c83ce351p",
+    title: "Redux",
     content: `Redux is a predictable state management library that I’ve explored as part of my web development toolkit. Designed to work seamlessly with JavaScript frameworks like React, it provides a centralized way to manage an application’s state, making it easier to track data flow and debug issues. While BlogA2 relies on simpler state management for now, Redux is a tool I’m keen to leverage for more complex projects—or even to enhance BlogA2 down the line.
 
 What Is Redux?
@@ -445,21 +445,21 @@ Why Not Something Else?
 React’s Context API or newer libraries like Recoil or Zustand offer lighter alternatives. For BlogA2, Context might’ve been enough, but Redux’s robustness and ecosystem (like middleware for async actions) make it a heavier hitter for complex needs.
 
 In short, Redux is a powerhouse for state management that I’m excited to master. It’s overkill for BlogA2’s current minimalism, but it’s on my radar for projects where state complexity calls for a centralized, predictable solution. As I grow as a developer, it’s a tool I’ll keep in my back pocket.`,
-    image: 'articlesImages/Redux.png',
-    imagePath: 'articlesImages/Redux.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Redux.png",
+    imagePath: "articlesImages/Redux.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
   {
-    id: '67efb768d7fe106c83ce351q',
-    title: 'TypeScript',
+    id: "67efb768d7fe106c83ce351q",
+    title: "TypeScript",
     content: `TypeScript is a superset of JavaScript that I’ve embraced to enhance my development process, including in projects like BlogA2. By adding static typing to JavaScript, TypeScript catches errors early, improves code quality, and makes my MERN stack projects more robust. It’s a game-changer for building reliable web applications.
 
 What Is TypeScript?
@@ -482,19 +482,19 @@ There aren’t many direct TypeScript alternatives—Flow exists, but it’s les
 
 In short, TypeScript is my secret weapon for BlogA2. It catches bugs, clarifies my code, and scales with my ambitions—all while fitting snugly into the MERN stack. Whether I’m tweaking this practice site or tackling a massive app, TypeScript’s got my back.
 `,
-    image: 'articlesImages/Typescript.png',
-    imagePath: 'articlesImages/Typescript.png',
-    authorId: '67ee782f03ead11d51257a7e',
-    createdAt: '2025-04-04T12:43:15.803+00:00',
-    updatedAt: '2025-04-04T12:43:15.803+00:00',
+    image: "articlesImages/Typescript.png",
+    imagePath: "articlesImages/Typescript.png",
+    authorId: "67ee782f03ead11d51257a7e",
+    createdAt: "2025-04-04T12:43:15.803+00:00",
+    updatedAt: "2025-04-04T12:43:15.803+00:00",
     author: {
-      id: '67ee782f03ead11d51257a7e',
-      image: 'alireza.jpg',
-      role: 'admin',
-      username: 'alireza',
+      id: "67ee782f03ead11d51257a7e",
+      image: "alireza.jpg",
+      role: "admin",
+      username: "alireza",
     },
   },
-]
+];
 
-export type { Post }
-export default posts
+export type { Post };
+export default posts;

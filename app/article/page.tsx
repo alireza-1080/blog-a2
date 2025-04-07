@@ -1,10 +1,10 @@
-import React from 'react'
-import { redirect, RedirectType } from 'next/navigation'
+import React from "react";
+import { redirect, RedirectType } from "next/navigation";
 
 const ArticlePage = async () => {
-  redirect('/', RedirectType.replace)
+  redirect("/", RedirectType.replace);
 
-  return <></>
-}
+  return <></>;
+};
 
-export default ArticlePage
+export default ArticlePage;

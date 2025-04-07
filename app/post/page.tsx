@@ -1,10 +1,10 @@
-import React from 'react'
-import { redirect, RedirectType } from 'next/navigation'
+import React from "react";
+import { redirect, RedirectType } from "next/navigation";
 
 const PostPage = async () => {
-  redirect('/', RedirectType.replace)
+  redirect("/", RedirectType.replace);
 
-  return <></>
-}
+  return <></>;
+};
 
-export default PostPage
+export default PostPage;

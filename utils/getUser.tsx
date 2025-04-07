@@ -1,41 +1,41 @@
-import { cookies } from 'next/headers'
+import { cookies } from "next/headers";
 
 type UserType = {
-  id: string
-  email: string
-  image: string
-  role: string
-  username: string
-}
+  id: string;
+  email: string;
+  image: string;
+  role: string;
+  username: string;
+};
 
 const getUser = async (): Promise<UserType | null> => {
-  const cookieStore = await cookies()
-  const authTokenCookie = cookieStore.get('auth_token')
+  const cookieStore = await cookies();
+  const authTokenCookie = cookieStore.get("auth_token");
 
-  const auth_token = authTokenCookie?.value || ''
+  const auth_token = authTokenCookie?.value || "";
 
   try {
-    const response = await fetch('https://blog-a2.vercel.app/api/user/get-me', {
-      method: 'POST',
-      credentials: 'include',
-      cache: 'no-store',
+    const response = await fetch("https://blog-a2.vercel.app/api/user/get-me", {
+      method: "POST",
+      credentials: "include",
+      cache: "no-store",
       headers: {
         Authorization: `Bearer ${auth_token}`,
       },
-    })
+    });
 
-    const data = await response.json()
+    const data = await response.json();
 
-    const user = data.user
+    const user = data.user;
 
-    return user
+    return user;
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error)
+      console.log(error);
     }
-    return null
+    return null;
   }
-}
+};
 
-export type { UserType }
-export default getUser
+export type { UserType };
+export default getUser;
